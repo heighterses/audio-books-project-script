@@ -11,7 +11,7 @@ import time
 driver = webdriver.Chrome()
 
 # Navigate to the Goodreads page
-driver.get("https://www.goodreads.com/book/popular_by_date/2024/3")
+driver.get("https://www.goodreads.com/book/popular_by_date/2024/8")
 
 # Define folders for downloading and editing images
 download_folder = "C:\\Users\\Abdul\\Desktop\\downloaded_book_images"
@@ -125,7 +125,7 @@ def load_all_books(driver, clicks=10):
 if __name__ == "__main__":
     try:
         # Click "Show more books" button 10 times
-        load_all_books(driver, clicks=15)
+        load_all_books(driver, clicks=1)
 
         # After loading all books, scrape the image elements and titles again
         image_elements = driver.find_elements(By.XPATH, "//img[@class='ResponsiveImage']")
